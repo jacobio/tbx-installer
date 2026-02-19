@@ -17,6 +17,7 @@ var:string loc = "https://raw.githubusercontent.com/jacobio/tbx-installer/main/"
 
 var:string note = create("/README");
 $Text(note) = runCommand("curl -s " + loc + "tbx-readme.md").trim;
+select(note);
 
 // DONE!
 show("Installed successfully! Enjoy.", "dark bright green", "white");

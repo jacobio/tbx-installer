@@ -1,4 +1,4 @@
-# tbx-installer
+# A Tinderbox Installer Template
 
 A forkable template for building GitHub-backed [Tinderbox](https://www.eastgate.com/Tinderbox/) installers. Fork this repo, rename it, customize `install.tbxc`, and you have a one-line installer for your own Tinderbox prototypes, templates, and tools.
 
