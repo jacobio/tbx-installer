@@ -1,0 +1,22 @@
+// ============================================================
+// TBX Installer Template
+// ============================================================
+//
+// This is a minimal installer that creates a README note
+// in the current Tinderbox document.
+//
+// Customize this file to install your own prototypes,
+// templates, stamps, and other components.
+//
+// All components are fetched from GitHub at install time.
+// ============================================================
+
+var:string loc = "https://raw.githubusercontent.com/jacobio/tbx-installer/main/";
+
+// 1. Create README ////////////////////////////////////////////////////////////
+
+var:string note = create("/README");
+$Text(note) = runCommand("curl -s " + loc + "tbx-readme.md").trim;
+
+// DONE!
+show("Installed successfully! Enjoy.", "dark bright green", "white");
