@@ -36,6 +36,18 @@ scripts/set-mode.sh local    # Switch to local URLs
 scripts/set-mode.sh remote   # Switch to remote GitHub URLs
 ```
 
+### BBEdit Syntax Highlighting
+
+The [tbx-bbedit](https://github.com/jacobio/tbx-bbedit) codeless language module adds Tinderbox action code highlighting to BBEdit — highly recommended when editing `.tbxc` installer scripts. It highlights attributes, operators, designators, control flow, and types, making it easy to spot typos and navigate complex installers.
+
+Install with:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/jacobio/tbx-bbedit/main/install.sh | sh
+```
+
+Or clone the repo and run `./install.sh` to create a symlink (so `git pull` picks up updates automatically). Relaunch BBEdit after installing.
+
 ### Pre-push Hook
 
 The `.githooks/pre-push` hook blocks pushes if local URLs are found in committed content — a safety net in case the filter isn't configured.
